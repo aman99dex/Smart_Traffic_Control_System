@@ -1,7 +1,5 @@
 from scipy import ndimage
-from scipy.ndimage.filters import convolve
-
-from scipy import misc
+from scipy.ndimage import convolve
 import numpy as np
 
 class CannyEdgeDetector:
@@ -33,8 +31,8 @@ class CannyEdgeDetector:
         Kx = np.array([[-1, 0, 1], [-2, 0, 2], [-1, 0, 1]], np.float32)
         Ky = np.array([[1, 2, 1], [0, 0, 0], [-1, -2, -1]], np.float32)
 
-        Ix = ndimage.filters.convolve(img, Kx)
-        Iy = ndimage.filters.convolve(img, Ky)
+        Ix = ndimage.convolve(img, Kx)
+        Iy = ndimage.convolve(img, Ky)
 
         G = np.hypot(Ix, Iy)
         G = G / G.max() * 255

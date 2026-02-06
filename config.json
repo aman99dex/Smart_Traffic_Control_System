@@ -1,0 +1,80 @@
+{
+  "application": {
+    "title": "Smart Traffic Control System",
+    "version": "2.0.0",
+    "description": "Density-Based Smart Traffic Control System for Traffic Management"
+  },
+  "image_processing": {
+    "canny_edge_detection": {
+      "sigma": 1.4,
+      "kernel_size": 5,
+      "low_threshold": 0.09,
+      "high_threshold": 0.20,
+      "weak_pixel": 100,
+      "strong_pixel": 255
+    },
+    "grayscale_conversion": {
+      "r_weight": 0.2989,
+      "g_weight": 0.5870,
+      "b_weight": 0.1140
+    }
+  },
+  "traffic_density": {
+    "lanes": 4,
+    "time_allocation": {
+      "very_high": {
+        "threshold": 4,
+        "green_time_seconds": 60,
+        "label": "Very High Traffic Density"
+      },
+      "high": {
+        "threshold": 3,
+        "green_time_seconds": 50,
+        "label": "High Traffic Density"
+      },
+      "medium": {
+        "threshold": 2,
+        "green_time_seconds": 40,
+        "label": "Medium Traffic Density"
+      },
+      "low": {
+        "threshold": 1,
+        "green_time_seconds": 30,
+        "label": "Low Traffic Density"
+      }
+    }
+  },
+  "directories": {
+    "images": "images",
+    "output": "gray",
+    "logs": "logs",
+    "data": "data"
+  },
+  "files": {
+    "traffic_data": "Previous_data.txt",
+    "traffic_data_backup": "Previous_data_backup.txt",
+    "analysis_log": "logs/analysis_log.txt",
+    "reference_image": "gray/refrence.png"
+  },
+  "gui": {
+    "window_title": "Green Light Control System",
+    "window_width": 1300,
+    "window_height": 1200,
+    "font": {
+      "family": "Times New Roman",
+      "size": 14,
+      "style": "bold"
+    }
+  },
+  "logging": {
+    "enabled": true,
+    "level": "INFO",
+    "format": "%(asctime)s - %(levelname)s - %(message)s",
+    "date_format": "%Y-%m-%d %H:%M:%S"
+  },
+  "validation": {
+    "min_image_size": 100,
+    "max_image_size": 10000,
+    "supported_formats": ["png", "jpg", "jpeg", "bmp", "tiff"]
+  }
+}
