@@ -29,13 +29,27 @@ class ConfigManager:
             with open(self.config_path, 'r') as f:
                 config = json.load(f)
             
-            logger.info(f"Configuration loaded successfully from {self.config_path}")
+            # Only log if logger is available (check if logger has been defined globally)
+            try:
+                if 'logger' in globals():
+                    logger.info(f"Configuration loaded successfully from {self.config_path}")
+            except:
+                pass
+            
             return config
         except json.JSONDecodeError as e:
-            logger.error(f"Invalid JSON in configuration file: {e}")
+            try:
+                if 'logger' in globals():
+                    logger.error(f"Invalid JSON in configuration file: {e}")
+            except:
+                pass
             raise
         except Exception as e:
-            logger.error(f"Error loading configuration: {e}")
+            try:
+                if 'logger' in globals():
+                    logger.error(f"Error loading configuration: {e}")
+            except:
+                pass
             raise
     
     def get(self, key: str, default=None):
@@ -58,7 +72,12 @@ class ConfigManager:
         dir_path = self.get(f"directories.{dir_key}")
         if dir_path and not os.path.exists(dir_path):
             os.makedirs(dir_path, exist_ok=True)
-            logger.info(f"Created directory: {dir_path}")
+            # Only log if logger is already initialized
+            try:
+                if 'logger' in globals():
+                    logger.info(f"Created directory: {dir_path}")
+            except:
+                pass
         return dir_path
 
 
@@ -112,12 +131,16 @@ try:
 except Exception as e:
     # Fallback if config doesn't exist
     import logging
+    import traceback
     config_mgr = None
     logger = logging.getLogger("TrafficControlSystem")
     logger.setLevel(logging.INFO)
     handler = logging.StreamHandler()
     handler.setFormatter(logging.Formatter("%(asctime)s - %(levelname)s - %(message)s"))
     logger.addHandler(handler)
+    # Print error for debugging
+    logger.error(f"Failed to initialize from config: {e}")
+    traceback.print_exc()
 
 
 class DataValidator:
