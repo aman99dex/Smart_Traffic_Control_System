@@ -4,3 +4,28 @@
 2026-02-06 16:36:20 - INFO - Backup created: Previous_data_backup.txt
 2026-02-06 16:36:20 - INFO - Lane 1 updated with pixel count: 100
 2026-02-06 16:36:20 - INFO - Traffic level determined: Low Traffic Density (30s) for lane 1
+2026-02-06 16:42:33 - INFO - Traffic data file validated: Previous_data.txt
+2026-02-06 16:42:33 - INFO - Traffic data file validated: Previous_data.txt
+2026-02-06 16:42:33 - INFO - Backup created: Previous_data_backup.txt
+2026-02-06 16:42:33 - INFO - Lane 1 updated with pixel count: 100
+2026-02-06 16:42:33 - INFO - Traffic level determined: Low Traffic Density (30s) for lane 1
+2026-02-06 16:42:58 - INFO - All required directories created/verified
+2026-02-06 16:42:58 - INFO - Traffic data file validated: Previous_data.txt
+2026-02-06 16:42:58 - INFO - Initializing GUI application
+2026-02-06 16:42:58 - INFO - GUI setup completed successfully
+2026-02-06 16:43:18 - INFO - Lane selected: Lane 2
+2026-02-06 16:43:29 - INFO - Image file validated: /Users/aman/Desktop/Density-Based-Smart-Traffic-Control-System-main/images/A.png
+2026-02-06 16:43:29 - INFO - Image uploaded: /Users/aman/Desktop/Density-Based-Smart-Traffic-Control-System-main/images/A.png
+2026-02-06 16:43:32 - INFO - Image processed and saved: gray/test.png
+2026-02-06 16:43:38 - INFO - Image processed and saved: gray/test.png
+2026-02-06 16:43:40 - INFO - Pixel count - Sample: 10068, Reference: 12537
+2026-02-06 16:43:48 - INFO - Lane selected: Lane 1
+2026-02-06 16:43:59 - INFO - Image file validated: /Users/aman/Desktop/Density-Based-Smart-Traffic-Control-System-main/images/B.png
+2026-02-06 16:43:59 - INFO - Image uploaded: /Users/aman/Desktop/Density-Based-Smart-Traffic-Control-System-main/images/B.png
+2026-02-06 16:44:03 - INFO - Image processed and saved: gray/test.png
+2026-02-06 16:44:04 - INFO - Traffic level determined: High Traffic Density (50s) for lane 1
+2026-02-06 16:44:04 - INFO - Backup created: Previous_data_backup.txt
+2026-02-06 16:44:04 - INFO - Lane 1 updated with pixel count: 10068
+2026-02-06 16:44:06 - INFO - Time allocation: Lane 1 - High Traffic Density - 50s
+2026-02-06 16:44:07 - INFO - Pixel count - Sample: 12504, Reference: 12537
+2026-02-06 16:44:11 - INFO - Application closed by user
