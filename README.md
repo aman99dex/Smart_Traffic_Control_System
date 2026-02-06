@@ -1,50 +1,36 @@
-# Density Based Smart Traffic Control System v2.0
+# Smart Traffic Control System v2.0
 
-**Production-Ready Traffic Management Solution**
+**Intelligent Traffic Management using Computer Vision**
 
 ![Version](https://img.shields.io/badge/version-2.0.0-blue)
 ![Status](https://img.shields.io/badge/status-Production%20Ready-green)
 ![Python](https://img.shields.io/badge/python-3.8%2B-blue)
-![License](https://img.shields.io/badge/license-MIT-green)
 
 ## Overview
 
-A production-ready **computer vision-based traffic control system** that intelligently manages traffic light timing by analyzing real-time traffic density using the **Canny Edge Detection** algorithm. The system processes traffic camera images to detect vehicle density across multiple lanes and dynamically allocates green light duration based on actual traffic conditions and historical data patterns.
+An intelligent traffic control system that uses **Canny Edge Detection** to analyze traffic density and dynamically optimize green light timing across multiple lanes.
 
-**Perfect for**: Traffic Police, Traffic Management Authorities, Smart City Initiatives
+**Features:**
+- 🚦 Real-time vehicle density detection
+- 📊 Multi-lane support (up to 4 lanes)  
+- ⏱️ Dynamic green light allocation (30-60 seconds)
+- 📈 Historical traffic pattern tracking
+- 🖥️ Professional GUI for traffic management
+- 📝 Comprehensive audit logging
+- 💾 Automatic data backups & recovery
+- 🚀 One-command deployment (Windows/Mac/Linux)
 
-### Key Features
+## Quick Start
 
-✓ **Real-time Traffic Density Detection** - Canny edge detection identifies vehicles in traffic images  
-✓ **Multi-Lane Support** - Manages up to 4 traffic lanes simultaneously  
-✓ **Dynamic Time Allocation** - Adjusts green light duration (30-60 seconds) based on current traffic density  
-✓ **Historical Data Tracking** - Compares current conditions with historical patterns  
-✓ **Professional GUI** - User-friendly desktop application for traffic police  
-✓ **Comprehensive Logging** - All operations logged for audit and troubleshooting  
-✓ **Data Integrity** - Automatic backups and corruption recovery  
-✓ **Easy Deployment** - One-command setup for Windows, macOS, and Linux  
-
----
-
-## Quick Start (30 seconds)
-
-### Windows
+**Windows:**
 ```bash
 run.bat
 ```
 
-### macOS/Linux
+**macOS/Linux:**
 ```bash
 ./run.sh
 ```
-
-That's it! The system will:
-1. Create virtual environment
-2. Install dependencies
-3. Run tests
-4. Start the application
-
----
 
 ## Documentation
 
